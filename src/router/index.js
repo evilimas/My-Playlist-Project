@@ -1,25 +1,59 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+
+//route guards
+import { projectAuth } from '@/firebase/config';
+
+const requreAuth = (to, from, next) => {
+  let user = projectAuth.currentUser;
+  if (!user) {
+    next({ name: 'login' });
+  } else {
+    next();
+  }
+};
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    beforeEnter: requreAuth,
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/auth/Login.vue'),
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: () => import('../views/auth/Signup.vue'),
+  },
+  {
+    path: '/playlists/create',
+    name: 'createPlaylist',
+    component: () => import('../views/playlists/CreatePlaylist.vue'),
+    beforeEnter: requreAuth,
+  },
+  {
+    path: '/playlists/:id',
+    name: 'playlistDetails',
+    component: () => import('../views/playlists/PlaylistDetails.vue'),
+    props: true,
+    beforeEnter: requreAuth,
+  },
+  {
+    path: '/playlists/user',
+    name: 'userPlaylists',
+    component: () => import('../views/playlists/UserPlaylists.vue'),
+    beforeEnter: requreAuth,
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
