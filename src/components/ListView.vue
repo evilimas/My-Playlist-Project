@@ -10,7 +10,9 @@
           <p>Created by {{ playlist.userName }}</p>
         </div>
         <div class="song-number">
-          <p>{{ playlist.songs.length }} Songs</p>
+          <p>
+            <span class="song-length">{{ playlist.songs.length }}</span> Songs
+          </p>
         </div>
       </div>
     </router-link>
@@ -52,5 +54,9 @@ img {
 }
 .song-number {
   margin-left: auto;
+}
+.song-length {
+  color: black;
+  font-weight: bold;
 }
 </style>
