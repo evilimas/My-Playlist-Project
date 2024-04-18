@@ -3,7 +3,12 @@
     <router-link :to="{ name: 'playlistDetails', params: { id: playlist.id } }">
       <div class="single">
         <div class="thumbnail">
-          <img :src="playlist.coverUrl" alt="" />
+          <span v-if="playlist.coverUrl">
+            <img :src="playlist.coverUrl" alt="playlist cover" />
+          </span>
+          <span v-else>
+            <img src="@/assets/logo2.jpg" alt="playlist cover " />
+          </span>
         </div>
         <div class="info">
           <h3>{{ playlist.title }}</h3>
