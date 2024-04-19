@@ -28,7 +28,6 @@
 
 <script setup>
 const props = defineProps(['playlists']);
-// const songs = playlist.songs.length < 1 ? 'Song' : 'Songs';
 </script>
 
 <style scoped>
