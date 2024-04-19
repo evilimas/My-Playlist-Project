@@ -11,6 +11,7 @@
 </template>
 
 <script setup>
+// imports
 import useDocument from '@/composables/useDocument';
 import { ref } from 'vue';
 
