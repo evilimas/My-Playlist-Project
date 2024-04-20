@@ -25,6 +25,7 @@
 </template>
 
 <script setup>
+// imports
 import { useRouter } from 'vue-router';
 import useLogout from '@/composables/useLogout';
 import getUser from '@/composables/getUser';

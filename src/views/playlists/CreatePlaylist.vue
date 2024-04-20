@@ -17,6 +17,7 @@
 </template>
 
 <script setup>
+// imports
 import { ref } from 'vue';
 import useStorage from '@/composables/useStorage';
 import useCollection from '@/composables/useCollection';
@@ -24,6 +25,7 @@ import getUser from '@/composables/getUser';
 import { timestamp } from '@/firebase/config';
 import { useRouter } from 'vue-router';
 
+// refs
 const title = ref('');
 const description = ref('');
 const file = ref(null);

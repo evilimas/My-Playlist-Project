@@ -8,6 +8,7 @@
 </template>
 
 <script setup>
+// imports
 import { ref } from 'vue';
 import getCollection from '@/composables/getCollection';
 import ListView from '@/components/ListView.vue';

@@ -11,6 +11,7 @@
 </template>
 
 <script setup>
+// imports
 import getCollection from '@/composables/getCollection';
 import getUser from '@/composables/getUser';
 import ListView from '@/components/ListView.vue';
