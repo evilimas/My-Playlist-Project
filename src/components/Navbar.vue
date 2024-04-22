@@ -8,10 +8,12 @@
       </h1>
       <div class="links">
         <div v-if="user">
-          <router-link :to="{ name: 'createPlaylist' }"
+          <router-link class="r-links" :to="{ name: 'createPlaylist' }"
             >Create Playlist</router-link
           >
-          <router-link :to="{ name: 'userPlaylists' }">My Playlist</router-link>
+          <router-link class="r-links" :to="{ name: 'userPlaylists' }"
+            >My Playlist</router-link
+          >
           <span>Hi there, {{ user.displayName }}</span>
           <button @click="handleClick">Logout</button>
         </div>
@@ -76,5 +78,9 @@ span {
   padding-left: 16px;
   border-left: 1px solid #eee;
   font-weight: bold;
+}
+.r-links:hover {
+  color: #000000;
+  text-decoration: underline;
 }
 </style>
