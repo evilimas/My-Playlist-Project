@@ -3,7 +3,7 @@
     <nav>
       <h1>
         <router-link :to="{ name: 'home' }"
-          ><img src="@/assets/logo2.jpg" alt=""
+          ><img class="logo" src="@/assets/logo2.jpg" alt=""
         /></router-link>
       </h1>
       <div class="links">
@@ -82,5 +82,9 @@ span {
 .r-links:hover {
   color: #000000;
   text-decoration: underline;
+}
+.logo:hover {
+  transform: scale(1.2);
+  transition: all 0.7s ease-in;
 }
 </style>
