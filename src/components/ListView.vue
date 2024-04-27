@@ -42,7 +42,7 @@ const props = defineProps(['playlists']);
 }
 .single:hover {
   box-shadow: 1px 2px 3px rgba(50, 50, 50, 0.05);
-  transform: scale(1.02);
+  transform: scale(1.08);
   transition: all ease 0.2s;
 }
 .thumbnail {
