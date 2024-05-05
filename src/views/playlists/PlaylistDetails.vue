@@ -103,7 +103,8 @@ const handleSongDelete = async (id) => {
   color: #999;
 }
 .description {
-  text-align: left;
+  /* text-align: left; */
+  text-align: center;
 }
 .single-song {
   padding: 10px 0;
