@@ -70,6 +70,6 @@ textarea {
 /* error text */
 .error {
   color: var(--warning);
-  font-size: 14px;
+  font-size: 15px;
   margin: 16px 0;
 }
