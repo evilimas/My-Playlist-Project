@@ -17,7 +17,7 @@
         <div class="song-number">
           <p>
             <span class="song-length">{{ playlist.songs.length }}:</span>
-            <span v-if="playlist.songs.length <= 1"> Song</span>
+            <span v-if="playlist.songs.length === 1"> Song</span>
             <span v-else> Songs</span>
           </p>
         </div>
