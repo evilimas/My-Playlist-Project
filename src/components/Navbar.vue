@@ -84,7 +84,7 @@ span {
   text-decoration: underline;
 }
 .logo:hover {
-  transform: scale(1.09);
+  transform: scale(1.08);
   transition: all ease 0.4s;
 }
 </style>
